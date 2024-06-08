@@ -3,7 +3,7 @@ import random
 
 
 #Exercise 1
-def calculate_F1_score(tp, fp, fn):
+def calculate_f1_score(tp, fp, fn):
     precision = tp / (tp + fp)
     recall = tp / (tp + fn)
     f1_score = 2 * (precision * recall) / (precision + recall)
@@ -31,7 +31,7 @@ def exercise1(tp, fp, fn):
     if fn <= 0:
         print("FN must > 0")
         return
-    calculate_F1_score(tp, fp, fn)
+    calculate_f1_score(tp, fp, fn)
 
 
 #Exercise 2
