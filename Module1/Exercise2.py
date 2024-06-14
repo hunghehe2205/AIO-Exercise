@@ -11,14 +11,14 @@ def exercise1(num_list, k):
 
 
 def exercise2(word):
-    dict = {}
+    dict_res = {}
     for c in word:
-        if c not in dict:
+        if c not in dict_res:
             numb = word.count(c)
-            dict[c] = numb
+            dict_res[c] = numb
             word.replace(c, '')
     sorted_dict = {k: v for k, v in sorted(
-        dict.items(), key=lambda item: item[1])}
+        dict_res.items(), key=lambda item: item[1])}
     print("{ ", end='')
     formatted_items = ', '.join(
         [f"'{k}': {v}" for k, v in sorted_dict.items()])
@@ -30,14 +30,14 @@ def count_words(file_path):
     a_file = open(file_path, 'r')
     word = a_file.read()
     list_word = word.split()
-    dict = {}
+    dict_res = {}
     for c in list_word:
-        if c not in dict:
+        if c not in dict_res:
             numb = list_word.count(c)
-            dict[c] = numb
+            dict_res[c] = numb
             list_word.remove(c)
     sorted_dict = {k: v for k, v in sorted(
-        dict.items(), key=lambda item: item[1])}
+        dict_res.items(), key=lambda item: item[1])}
     print("{ ", end='')
     formatted_items = ',\n'.join(
         [f"'{k}': {v}" for k, v in sorted_dict.items()])
